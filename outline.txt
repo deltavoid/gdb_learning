@@ -1,0 +1,35 @@
+
+
+gdb
+
+program, process, thread, function, stack, scene
+
+
+两种模式
+
+    gdb 启动程序
+
+    gdb attach 进程
+
+
+
+gdb <program>
+
+    list
+
+    break <line>, b
+    break <func>
+
+    info break
+
+    run
+
+    next, n
+
+    continue
+
+    print <var>
+
+    backtrace, bt
+
+    quit, q
