@@ -22,6 +22,8 @@ gdb <program>
 
     info break
 
+    info threads | i threads
+
     run
 
     next, n

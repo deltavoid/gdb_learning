@@ -1,0 +1,29 @@
+
+
+
+gcc
+
+gdb
+
+
+
+
+ldd
+
+nm
+
+readelf
+
+objdump
+
+
+
+
+
+
+
+源码 -> 可执行文件 -> 进程
+
+
+cmake, gcc      kernel, gdb
+
