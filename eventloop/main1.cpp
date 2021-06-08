@@ -52,6 +52,11 @@ public:
 };
 
 
+void main_breakpoint()
+{
+}
+
+
 int main(int argc, char **argv)
 {
     int thread_num = 1;
@@ -75,6 +80,8 @@ int main(int argc, char **argv)
     // sleep(sleep_time);
     for (int i = 0; i < sleep_time; i++)
     {
+        main_breakpoint();
+
         sleep(1);
     }
 
