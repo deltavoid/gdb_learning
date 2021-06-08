@@ -18,11 +18,13 @@ public:
     std::unique_ptr<std::thread> thread;
     volatile bool running;
     int id;
+    int cnt;
 
 
     Worker(int id)
         : id(id)
     {
+        cnt = 0;
         running = true;
         thread = std::make_unique<std::thread>([this]() { this->run(); });
     }
@@ -37,12 +39,13 @@ public:
     {
         printf("Worker::run, id: %d\n", id);
 
-        std::mt19937 rand(time(NULL) + id);
+        // std::mt19937 rand(time(NULL) + id);
 
         while (running)
         {
-            printf("id: %d, rand: %lld\n", id, rand());
-            
+            // printf("id: %d, rand: %lld\n", id, rand());
+            printf("id: %d, cnt: %d\n", id, ++cnt);
+
             sleep(1);
         }
     }
@@ -69,7 +72,11 @@ int main(int argc, char **argv)
     for (int i = 0; i < workers.size(); i++)
         workers[i] = std::make_unique<Worker>(i);
 
-    sleep(sleep_time);
+    // sleep(sleep_time);
+    for (int i = 0; i < sleep_time; i++)
+    {
+        sleep(1);
+    }
 
 
 

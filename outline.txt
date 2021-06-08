@@ -35,3 +35,20 @@ gdb <program>
     backtrace, bt
 
     quit, q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+one breakpoint will block the target thread and all the other thread, which looks reasonable.
+
